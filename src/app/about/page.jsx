@@ -17,6 +17,15 @@ const AboutPage = () => {
 				height={200}
 				priority
 			/>
+			<br />
+			<br />
+			<Image
+				src="https://webcademy.ru/blog/wp-content/uploads/2023/07/Travel-X-Cover-870x400.jpg"
+				alt="Dodge"
+				width={435}
+				height={200}
+				priority
+			/>
 		</section>
 	);
 };
