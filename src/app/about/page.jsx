@@ -1,3 +1,5 @@
+import Image from 'next/image';
+
 const AboutPage = () => {
 	return (
 		<section className="content">
@@ -8,7 +10,13 @@ const AboutPage = () => {
 				eaque harum fugiat quas? Reiciendis voluptas dolores obcaecati
 				et fugiat commodi, reprehenderit quod.
 			</p>
-			<img src="./dodge-400-200.jpg" alt="Dodge" />
+			<Image
+				src="/dodge-400-200.jpg"
+				alt="Dodge"
+				width={400}
+				height={200}
+				priority
+			/>
 		</section>
 	);
 };
