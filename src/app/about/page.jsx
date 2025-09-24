@@ -8,6 +8,7 @@ const AboutPage = () => {
 				eaque harum fugiat quas? Reiciendis voluptas dolores obcaecati
 				et fugiat commodi, reprehenderit quod.
 			</p>
+			<img src="./dodge-400-200.jpg" alt="Dodge" />
 		</section>
 	);
 };
