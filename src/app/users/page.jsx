@@ -7,7 +7,15 @@ async function getUsers() {
 }
 
 const UserItem = ({ user }) => {
-	return <div key={user.id}>{user.name}</div>;
+	return (
+		<div className="item">
+			<div>
+				<div className="item-title">{`${user.id}. ${user.name}`}</div>
+				<div className="item-sub">{user.email}</div>
+			</div>
+			<span aria-hidden>→</span>
+		</div>
+	);
 };
 const UsersPage = async () => {
 	const users = await getUsers();
@@ -16,9 +24,11 @@ const UsersPage = async () => {
 	return (
 		<section className="content">
 			<h2 className="section-title">Users</h2>
-			{users.map((user) => (
-				<UserItem key={user.id} user={user} />
-			))}
+			<div className="users-list">
+				{users.map((user) => (
+					<UserItem key={user.id} user={user} />
+				))}
+			</div>
 		</section>
 	);
 };
