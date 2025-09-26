@@ -1,3 +1,5 @@
+import Link from 'next/link';
+
 async function getUsers() {
 	const res = await fetch('https://jsonplaceholder.typicode.com/users', {
 		cache: 'no-store',
@@ -8,13 +10,13 @@ async function getUsers() {
 
 const UserItem = ({ user }) => {
 	return (
-		<div className="item">
+		<Link href={`/users/${user.id}`} className="item">
 			<div>
 				<div className="item-title">{`${user.id}. ${user.name}`}</div>
 				<div className="item-sub">{user.email}</div>
 			</div>
 			<span aria-hidden>→</span>
-		</div>
+		</Link>
 	);
 };
 const UsersPage = async () => {
