@@ -1,3 +1,5 @@
+import { notFound } from 'next/navigation';
+
 async function getUser(id) {
 	const res = await fetch(
 		`https://jsonplaceholder.typicode.com/users/${id}`,
@@ -5,8 +7,7 @@ async function getUser(id) {
 			cache: 'no-store',
 		},
 	);
-	if (!res.ok) throw new Error('Failed to fetch user');
-	return res.json();
+	if (res.status === 404) notFound();
 }
 
 const UsersPage = async ({ params }) => {
