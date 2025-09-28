@@ -1,3 +1,5 @@
+import Button from '@/components/Button';
+
 export default function Home() {
 	return (
 		<section className="content">
@@ -8,6 +10,7 @@ export default function Home() {
 				libero aperiam, totam reprehenderit cumque labore, ducimus culpa
 				quod consequatur molestias nemo eveniet.
 			</p>
+			<Button />
 		</section>
 	);
 }
