@@ -8,6 +8,7 @@ async function getUser(id) {
 		},
 	);
 	if (res.status === 404) notFound();
+	return res.json();
 }
 
 const UsersPage = async ({ params }) => {
