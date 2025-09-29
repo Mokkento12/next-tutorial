@@ -15,6 +15,9 @@ const Navigation = () => {
 			<Link href="/getExample" className="nav-link">
 				Get
 			</Link>
+			<Link href="/postExample" className="nav-link">
+				Post
+			</Link>
 			<Link href="/contacts" className="nav-link">
 				Contacts
 			</Link>
