@@ -1,5 +1,11 @@
 import Button from '@/components/Button';
 
+export const metadata = {
+	title: 'Next JS tutorial',
+	description: 'Learning Next JS',
+	keywords: 'bussiness, next js, react',
+};
+
 export default function Home() {
 	return (
 		<section className="content">
